@@ -1,0 +1,29 @@
+<main class="from">
+  <h1>to way data binding</h1>
+  <form (ngSubmit)="onSubmit()">
+  <input type="text" name="name" [(ngModel)]="name" placeholder="name"/>
+  <input type="text" name="email" [(ngModel)]="email"   placeholder="email"/>
+  <textarea class="messgae" [(ngModel)]="message"  name="message"  placeholder="type messgae..."></textarea>
+  <button type="submit">submit</button>
+</form>
+<div class="container" *ngIf="isSubmitted">
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>name</th>
+        <th>email</th>
+        <th>message</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let msg of messages;let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{msg.name}}</td>
+        <td>{{msg.email}}</td>
+        <td>{{msg.message}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</main>

@@ -1,0 +1,85 @@
+.from {
+  width: 300px;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+h1 {
+  text-align: center;
+}
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  gap: 10px;
+  // padding: 0 40px;
+}
+input {
+  width: 250px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #323131;
+}
+textarea {
+  width: 250px;
+  height: 60px;
+  resize: none;
+  border-radius: 10px;
+  border: 1px solid #323131;
+  padding: 10px;
+}
+button {
+  padding: 5px 13px;
+  background: #121212;
+  color: white;
+  border-radius: 8px;
+  margin: 0 auto;
+  cursor: pointer;
+  font-size: 18px;
+}
+button:hover {
+  background: #3f3f3f;
+}
+.data p {
+  margin-top: 8px;
+}
+// -----------table
+.container {
+  transform: translateX(-18%);
+}
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+  background-color: #002b98;
+  color: #ffffff;
+  text-align: center;
+
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #002b98;
+}
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
