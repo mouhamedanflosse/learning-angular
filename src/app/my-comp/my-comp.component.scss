@@ -1,5 +1,5 @@
 .from {
-  width: 300px;
+  width: 700px;
   padding: 10px;
   margin: 0 auto;
   display: flex;
@@ -48,15 +48,24 @@ button:hover {
 }
 // -----------table
 .container {
-  transform: translateX(-18%);
+  // transform: translateX(-18%);
+
+}
+.stat {
+  transform: translatey(-20px);
+  overflow-x: auto;
+  max-height: 180px;
+  align-self: flex-start;
+  min-width: 420px;
+  background: transparent;
+  margin: 25px 0;
+  width: fit-content;
 }
 .styled-table {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   border-collapse: collapse;
-  margin: 25px 0;
   font-size: 0.9em;
   font-family: sans-serif;
-  min-width: 400px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 .styled-table thead tr {
   background-color: #002b98;
@@ -85,10 +94,15 @@ button:hover {
 }
 //----------- card
 .cards {
+  margin: 0 auto;
   display: flex;
   width: 500px;
   justify-items: center;
   gap: 20px ;
   flex-wrap: wrap;
   max-width: 500px ;
+}
+.overview {
+  display: flex;
+  gap: 50px;
 }

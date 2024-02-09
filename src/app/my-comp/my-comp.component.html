@@ -1,5 +1,6 @@
 <main class="from">
   <h1>to way data binding</h1>
+  <div class="overview">
   <form (ngSubmit)="onSubmit()">
     <input type="text" name="name" [(ngModel)]="name" placeholder="name" />
     <input type="text" name="email" [(ngModel)]="email" placeholder="email" />
@@ -11,8 +12,8 @@
     ></textarea>
     <button type="submit">submit</button>
   </form>
-  <div class="container" *ngIf="isSubmitted">
-    <table class="styled-table">
+  <div class="stat">
+  <table class="styled-table">
     <thead>
       <tr>
         <th>#</th>
@@ -30,6 +31,9 @@
       </tr>
     </tbody>
   </table>
+</div>
+</div>
+  <div class="container" *ngIf="isSubmitted">
     <div class="cards">
       <app-message-detials
         *ngFor="let msg of messages; let i = index"
