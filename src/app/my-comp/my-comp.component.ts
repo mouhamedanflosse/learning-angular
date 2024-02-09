@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgFor, NgIf } from '@angular/common';
 import { MessageDetialsComponent } from '../message-detials/message-detials.component';
+import { MyService } from '../service/my.service';
 
 @Component({
   selector: 'app-my-comp',
@@ -16,14 +17,29 @@ export class MyCompComponent {
   message: string = 'message';
   isSubmitted: boolean = false;
   messages: Array<any> = [];
+  private service  = inject(MyService)
+
+  constructor (
+    // private service : MyService
+    ) {
+    this.messages = this.service.getAllMsg()
+    this.isSubmitted = this.service.messages.length > 0
+  }
 
   onSubmit(): void {
     this.isSubmitted = true;
-    // console.log(this.name, this.email, this.message);
-    this.messages.push({
-      name: this.name,
-      email: this.email,
-      message: this.message,
-    });
+    this.service.addMsg({
+        name: this.name,
+        email: this.email,
+        message: this.message,
+      })
+    // this.messages.push({
+    //   name: this.name,
+    //   email: this.email,
+    //   message: this.message,
+    // });
+  }
+  deleteCard (index : number) {
+    this.messages.splice(index,1)
   }
 }

@@ -1,1 +1,7 @@
-<p>message-detials works!</p>
+<div class="card" (click)="logIndex()">
+  <!-- <p>id : {{params}}</p> -->
+  <p>name : {{message.name}}</p>
+  <p> email :  {{message.email}}</p>
+  <p> message :  {{message.message}}</p>
+  <button (click)="deleteItem()">delete</button>
+</div>

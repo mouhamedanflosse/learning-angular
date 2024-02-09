@@ -83,3 +83,12 @@ button:hover {
   font-weight: bold;
   color: #009879;
 }
+//----------- card
+.cards {
+  display: flex;
+  width: 500px;
+  justify-items: center;
+  gap: 20px ;
+  flex-wrap: wrap;
+  max-width: 500px ;
+}

@@ -1,13 +1,18 @@
 <main class="from">
   <h1>to way data binding</h1>
   <form (ngSubmit)="onSubmit()">
-  <input type="text" name="name" [(ngModel)]="name" placeholder="name"/>
-  <input type="text" name="email" [(ngModel)]="email"   placeholder="email"/>
-  <textarea class="messgae" [(ngModel)]="message"  name="message"  placeholder="type messgae..."></textarea>
-  <button type="submit">submit</button>
-</form>
-<div class="container" *ngIf="isSubmitted">
-  <table class="styled-table">
+    <input type="text" name="name" [(ngModel)]="name" placeholder="name" />
+    <input type="text" name="email" [(ngModel)]="email" placeholder="email" />
+    <textarea
+      class="messgae"
+      [(ngModel)]="message"
+      name="message"
+      placeholder="type messgae..."
+    ></textarea>
+    <button type="submit">submit</button>
+  </form>
+  <div class="container" *ngIf="isSubmitted">
+    <table class="styled-table">
     <thead>
       <tr>
         <th>#</th>
@@ -25,5 +30,13 @@
       </tr>
     </tbody>
   </table>
-</div>
+    <div class="cards">
+      <app-message-detials
+        *ngFor="let msg of messages; let i = index"
+        [message]="msg"
+        [index]="i"
+        (delete)="deleteCard($event)"
+      ></app-message-detials>
+    </div>
+  </div>
 </main>
